@@ -39,9 +39,10 @@ def main():
 
     calories_row = week_beginning_row + 1
 
-    wks.update_cell(week_beginning_row, weekday_column, "testweight")
+    wks.update_cell(week_beginning_row, weekday_column, weight)
     wks.update_cell(calories_row, weekday_column, calories)
 
 if __name__ == '__main__':
-    calories = scraper.get_Calories()
+    calories = scraper.getCalories()
+    weight = scraper.getWeight()
     main()
